@@ -1,0 +1,11 @@
+@use "../varibles" as *;
+@use "../media.scss" as *;
+
+.choices {
+	&__btn {
+	}
+
+	&__box {
+		display: none;
+	}
+}

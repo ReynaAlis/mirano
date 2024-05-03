@@ -1,7 +1,13 @@
-@use './fonts.scss' as *;
-@use './base.scss' as *;
+@use 'fonts.scss' as *;
+@use 'base.scss' as *;
 @use './modules/header.scss' as *;
 @use './modules/hero.scss' as *;
+@use './modules/filter.scss' as *;
+@use './modules/choices.scss' as *;
+@use './modules/goods.scss' as *;
+@use './modules/card.scss' as *;
+@use './modules/subscribe.scss' as *;
+@use './modules/footer.scss' as *;
 
 @import 'normalize.css';
 
