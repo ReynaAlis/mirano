@@ -2,9 +2,11 @@ import '@/scss/index.scss';
 import { initHeaderFixer } from '@/scripts/headerFixer';
 import { initChoices } from '@/scripts/choices';
 import { initCart } from '@/scripts/cart';
+import { initSearchProducts } from '@/scripts/searchProducts';
 import { renderProducts } from '@/scripts/renderProducts';
-import { initChoicesType } from './scripts/choicesType';
-import { filterProducts } from './scripts/filterProducts';
+import { initChoicesType } from '@/scripts/choicesType';
+import { filterProducts } from '@/scripts/filterProducts';
+
 
 
 const init = () => {
@@ -12,6 +14,7 @@ const init = () => {
     initChoices();
     initChoicesType();
     initCart();
+    initSearchProducts();
     renderProducts();
     filterProducts();
 };

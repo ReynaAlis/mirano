@@ -1,4 +1,3 @@
-import { fetchProducts } from "./API";
 import { ProductCard } from "./ProductCard";
 import { store } from "./Store";
 
@@ -8,6 +7,14 @@ export const renderProducts = async () => {
         const products = store.getProducts();
 
         goodsList.innerHTML = '';
+
+        if (products.length === 0) {
+            const messageItem = document.createElement('li');
+            messageItem.textContent = 'Товары не найдены :(';
+            messageItem.classList.add('goods__no-product');
+            goodsList.appendChild(messageItem);
+            return;
+        }
 
         products.forEach((product) => {
             const productCard = ProductCard(product);
