@@ -3,6 +3,9 @@
 
 .choices {
 	&__btn {
+		&:focus-visible {
+			outline: none;
+		}
 	}
 
 	&__box {
