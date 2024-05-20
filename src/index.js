@@ -6,6 +6,7 @@ import { initSearchProducts } from '@/scripts/searchProducts';
 import { renderProducts } from '@/scripts/renderProducts';
 import { initChoicesType } from '@/scripts/choicesType';
 import { filterProducts } from '@/scripts/filterProducts';
+import { initOrder } from "./scripts/orderController";
 
 
 
@@ -17,6 +18,7 @@ const init = () => {
     initSearchProducts();
     renderProducts();
     filterProducts();
+    initOrder();
 };
 
 document.addEventListener('DOMContentLoaded', init);

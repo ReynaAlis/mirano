@@ -41,10 +41,19 @@
         background-color: transparent;
         color: $dark;
         background-color: $white;
+        outline: none;
 
         &::placeholder {
             opacity: 0.4;
             color: rgba($dark, 0.3);
+        }
+
+        &:hover {
+            background-color: $footer;
+        }
+
+        &:focus-visible {
+            border: 1px solid $light-orange;
         }
     }
 
@@ -60,5 +69,6 @@
         justify-content: center;
         border-radius: 32px;
         background-color: $light-orange;
+        outline: none;
     }
 }

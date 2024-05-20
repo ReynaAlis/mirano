@@ -37,6 +37,7 @@
       &__mail {
             display: inline-block;
             margin-bottom: 16px;
+            outline: none;
       }
 
       &__social-list {
@@ -44,6 +45,10 @@
             align-items: center;
             justify-content: center;
             gap: 12px;
+      }
+
+      &__link {
+            outline: none;
       }
 
       &__developers-item {

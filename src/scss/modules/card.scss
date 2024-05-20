@@ -54,7 +54,6 @@
         }
     }
 
-
     &__date-delivery {
         padding-left: 20px;
         background-image: url("/img/delivery.svg");
@@ -73,6 +72,7 @@
         min-width: 120px;
         background: $light-orange;
         color: $white;
+        outline: none;
     }
 
     &__button-text {

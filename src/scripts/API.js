@@ -12,7 +12,7 @@ const formatQueryString = (params) => {
     return `?${searchParams.toString()}`;
 }
 
-export const API_URL = 'http://localhost:3000';
+export const API_URL = 'https://peaceful-bird-angelfish.glitch.me';
 
 export const fetchProducts = async (params = {}) => {
 
@@ -28,6 +28,29 @@ export const fetchProducts = async (params = {}) => {
     } catch (error) {
         console.error(`Ошибка при получении данных: ${error}`);
         return [];
+    }
+};
+
+export const sendOrder = async (orderData) => {
+    try {
+        const response = await fetch(`${API_URL}/api/orders`, {
+            method: "POST",
+            credentials: "include",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify(orderData),
+        });
+
+        if (!response.ok) {
+            throw new Error(
+                `Ошибка при заказе, попробуйте позже! :: ${response.status}`,
+            );
+        }
+
+        return await response.json();
+    } catch (error) {
+        console.error(error);
     }
 };
 
